@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<TargetFramework>netcoreapp6.0</TargetFramework>
+		<AssemblyName>MicroserviceOrder</AssemblyName>
+		<LangVersion>8.0</LangVersion>
+		<UserSecretsId>8d385baf-ffc6-48b0-90a3-ef0727aa9874</UserSecretsId>
+	</PropertyGroup>
+	<PropertyGroup>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	</PropertyGroup>
+	<ItemGroup>
+		<Folder Include="wwwroot\" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNet.WebApi" Version="5.2.7" />
+		<PackageReference Include="Microsoft.AspNet.WebApi.WebHost" Version="5.2.7" />
+		<PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.9" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.9" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="3.1.9" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.9" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.9" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.9" />
+		<PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.9" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="3.1.9" />
+		<PackageReference Include="Microsoft.Extensions.Primitives" Version="3.1.9" />
+		<PackageReference Include="Microsoft.AspNetCore.App" />
+		<PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+		<PackageReference Include="Serilog" Version="2.10.0" />
+		<PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+		<PackageReference Include="Serilog.Sinks.Debug" Version="1.0.1" />
+		<PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
+		<PackageReference Include="Serilog.Sinks.MSSqlServer" Version="5.6.0" />
+		<PackageReference Include="NSwag.AspNetCore" Version="13.9.4" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.1.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.1" />
+		<PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0" />
+		<PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.8.0" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.12" />
+		<PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore.ReDoc" Version="6.4.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Model\Domain.csproj" />
+		<ProjectReference Include="..\Service\Application.csproj" />
+	</ItemGroup>
+</Project>
