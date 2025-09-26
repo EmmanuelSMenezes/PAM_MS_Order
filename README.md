@@ -1,4 +1,4 @@
-# PAM_MS_Order
+# 🔧 PAM_MS_Order
 
 <div align="center">
 
@@ -7,162 +7,162 @@
 [![Swagger](https://img.shields.io/badge/Swagger-API%20Docs-85EA2D?style=for-the-badge&logo=swagger)](https://swagger.io/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
-**Microservico de alta performance para a Plataforma PAM**
+**Microserviço de alta performance para a Plataforma PAM**
 
-[Demo](#demo) â€¢ [Documentacao](#documentacao) â€¢ [Instalacao](#instalacao) â€¢ [Contribuicao](#contribuicao)
+[🚀 Demo](#demo) • [📖 Documentação](#documentacao) • [🛠️ Instalação](#instalacao) • [🤝 Contribuição](#contribuicao)
 
 </div>
 
 ---
 
-## Sobre o Projeto
+## 📋 Sobre o Projeto
 
-Microservico para gerenciamento de pedidos e agendamentos. Controla criacao, status, historico, workflow completo, cancelamentos, reagendamentos, SLA, notificacoes e lifecycle completo dos pedidos de manutencao na plataforma.
+Microserviço para **gerenciamento de pedidos e agendamentos**. Controla criação, status, histórico, workflow completo, cancelamentos, reagendamentos, SLA, notificações e lifecycle completo dos pedidos de manutenção na plataforma.
 
-### Principais Funcionalidades
+### 🎯 Principais Funcionalidades
 
-- **Gestao de Pedidos**: CRUD e workflow completo
-- **Agendamentos**: Sistema de scheduling avancado
-- **Status**: Rastreamento em tempo real
-- **Cancelamentos**: Politicas e reembolsos
-- **Reagendamentos**: Flexibilidade para clientes
-- **SLA**: Monitoramento de prazos
-- **Relatorios**: Analytics de pedidos
-- **Notificacoes**: Alertas automaticos
+- 📋 **Gestão de Pedidos**: CRUD e workflow completo
+- 📅 **Agendamentos**: Sistema de scheduling avançado
+- 🔄 **Status**: Rastreamento em tempo real
+- ❌ **Cancelamentos**: Políticas e reembolsos
+- 🔄 **Reagendamentos**: Flexibilidade para clientes
+- ⏱️ **SLA**: Monitoramento de prazos
+- 📊 **Relatórios**: Analytics de pedidos
+- 🔔 **Notificações**: Alertas automáticos
 
-### Arquitetura Clean Architecture
+### 🏗️ Arquitetura Clean Architecture
 
-`
+```
 PAM_MS_Order/
-â”œâ”€â”€ Model/              # Dominio e Entidades
-â”‚   â”œâ”€â”€ Entities/       # Entidades de dominio
-â”‚   â”œâ”€â”€ DTOs/           # Data Transfer Objects
-â”‚   â”œâ”€â”€ Enums/          # Enumeracoes
-â”‚   â””â”€â”€ Validators/     # Validacoes de dominio
-â”œâ”€â”€ Repository/         # Camada de Dados
-â”‚   â”œâ”€â”€ Interfaces/     # Contratos de repositorio
-â”‚   â”œâ”€â”€ Implementations/# Implementacoes concretas
-â”‚   â”œâ”€â”€ Context/        # Contexto do Entity Framework
-â”‚   â””â”€â”€ Migrations/     # Migracoes do banco
-â”œâ”€â”€ Service/            # Logica de Negocio
-â”‚   â”œâ”€â”€ Interfaces/     # Contratos de servicos
-â”‚   â”œâ”€â”€ Implementations/# Implementacoes de servicos
-â”‚   â”œâ”€â”€ Mappers/        # Mapeamento de objetos
-â”‚   â””â”€â”€ Validators/     # Validacoes de negocio
-â”œâ”€â”€ WebApi/             # Camada de Apresentacao
-â”‚   â”œâ”€â”€ Controllers/    # Controladores da API
-â”‚   â”œâ”€â”€ Middlewares/    # Middlewares customizados
-â”‚   â”œâ”€â”€ Filters/        # Filtros de acao
-â”‚   â””â”€â”€ Configuration/  # Configuracoes da API
-â”œâ”€â”€ Dockerfile          # Containerizacao
-â”œâ”€â”€ docker-compose.yml  # Orquestracao local
-â””â”€â”€ README.md           # Este arquivo
-`
+├── 📁 Model/              # 🎯 Domínio e Entidades
+│   ├── Entities/          # Entidades de domínio
+│   ├── DTOs/              # Data Transfer Objects
+│   ├── Enums/             # Enumerações
+│   └── Validators/        # Validações de domínio
+├── 📁 Repository/         # 🗄️ Camada de Dados
+│   ├── Interfaces/        # Contratos de repositório
+│   ├── Implementations/   # Implementações concretas
+│   ├── Context/           # Contexto do Entity Framework
+│   └── Migrations/        # Migrações do banco
+├── 📁 Service/            # 🔧 Lógica de Negócio
+│   ├── Interfaces/        # Contratos de serviços
+│   ├── Implementations/   # Implementações de serviços
+│   ├── Mappers/           # Mapeamento de objetos
+│   └── Validators/        # Validações de negócio
+├── 📁 WebApi/             # 🌐 Camada de Apresentação
+│   ├── Controllers/       # Controladores da API
+│   ├── Middlewares/       # Middlewares customizados
+│   ├── Filters/           # Filtros de ação
+│   └── Configuration/     # Configurações da API
+├── 📄 Dockerfile          # 🐳 Containerização
+├── 📄 docker-compose.yml  # 🐳 Orquestração local
+└── 📄 README.md           # 📖 Este arquivo
+```
 
-## Tecnologias e Ferramentas
+## 🚀 Tecnologias e Ferramentas
 
 ### Core Framework
 - **[.NET 6.0](https://dotnet.microsoft.com/)** - Framework principal
 - **[ASP.NET Core](https://docs.microsoft.com/aspnet/core/)** - Web API framework
 - **[Entity Framework Core](https://docs.microsoft.com/ef/core/)** - ORM para acesso a dados
 
-### Documentacao e Testes
-- **[Swagger/OpenAPI](https://swagger.io/)** - Documentacao interativa da API
-- **[FluentValidation](https://fluentvalidation.net/)** - Validacao de dados
+### Documentação e Testes
+- **[Swagger/OpenAPI](https://swagger.io/)** - Documentação interativa da API
+- **[FluentValidation](https://fluentvalidation.net/)** - Validação de dados
 - **[AutoMapper](https://automapper.org/)** - Mapeamento de objetos
 - **[xUnit](https://xunit.net/)** - Framework de testes
 
-### Seguranca e Monitoramento
-- **[JWT Bearer](https://jwt.io/)** - Autenticacao e autorizacao
+### Segurança e Monitoramento
+- **[JWT Bearer](https://jwt.io/)** - Autenticação e autorização
 - **[Serilog](https://serilog.net/)** - Logging estruturado
-- **[HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks)** - Monitoramento de saude
+- **[HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks)** - Monitoramento de saúde
 
 ### DevOps e Infraestrutura
-- **[Docker](https://www.docker.com/)** - Containerizacao
+- **[Docker](https://www.docker.com/)** - Containerização
 - **[Azure DevOps](https://azure.microsoft.com/services/devops/)** - CI/CD Pipeline
 - **[SQL Server](https://www.microsoft.com/sql-server)** - Banco de dados principal
 
-## Pre-requisitos
+## 📦 Pré-requisitos
 
-Antes de comecar, certifique-se de ter instalado:
+Antes de começar, certifique-se de ter instalado:
 
-- **[.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)** (versao 6.0 ou superior)
-- **[Docker Desktop](https://www.docker.com/products/docker-desktop)** (opcional, para containerizacao)
+- **[.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)** (versão 6.0 ou superior)
+- **[Docker Desktop](https://www.docker.com/products/docker-desktop)** (opcional, para containerização)
 - **[SQL Server](https://www.microsoft.com/sql-server)** ou **[PostgreSQL](https://www.postgresql.org/)** (banco de dados)
 - **[Visual Studio 2022](https://visualstudio.microsoft.com/)** ou **[VS Code](https://code.visualstudio.com/)** (IDE recomendada)
 
-## Instalacao e Configuracao
+## 🛠️ Instalação e Configuração
 
-### 1. Clone o Repositorio
+### 1️⃣ Clone o Repositório
 
-`ash
+```bash
 git clone https://github.com/EmmanuelSMenezes/PAM_MS_Order.git
 cd PAM_MS_Order
-`
+```
 
-### 2. Configuracao do Ambiente
+### 2️⃣ Configuração do Ambiente
 
-`ash
-# Copie o arquivo de configuracao
+```bash
+# Copie o arquivo de configuração
 cp WebApi/appsettings.example.json WebApi/appsettings.Development.json
 
-# Configure suas variaveis de ambiente
+# Configure suas variáveis de ambiente
 # Edite o arquivo WebApi/appsettings.Development.json
-`
+```
 
-### 3. Configuracao do Banco de Dados
+### 3️⃣ Configuração do Banco de Dados
 
-`json
+```json
 {
   "ConnectionStrings": {
     "DefaultConnection": "Server=localhost;Database=PAM_PAM_MS_Order;Trusted_Connection=true;MultipleActiveResultSets=true"
   }
 }
-`
+```
 
-### 4. Restaurar Dependencias
+### 4️⃣ Restaurar Dependências
 
-`ash
+```bash
 dotnet restore
-`
+```
 
-### 5. Executar Migracoes
+### 5️⃣ Executar Migrações
 
-`ash
+```bash
 # Navegar para o projeto WebApi
 cd WebApi
 
-# Executar migracoes
+# Executar migrações
 dotnet ef database update
 
 # Voltar para a raiz
 cd ..
-`
+```
 
-### 6. Executar o Projeto
+### 6️⃣ Executar o Projeto
 
-`ash
+```bash
 # Desenvolvimento
 cd WebApi
 dotnet run
 
 # Ou usando o Visual Studio
 # Abra o arquivo .sln e pressione F5
-`
+```
 
-### 7. Verificar Instalacao
+### 7️⃣ Verificar Instalação
 
-Acesse os seguintes endpoints para verificar se tudo esta funcionando:
+Acesse os seguintes endpoints para verificar se tudo está funcionando:
 
-- **API**: http://localhost:5005
-- **Swagger UI**: http://localhost:5005/swagger
-- **Health Check**: http://localhost:5005/health
+- **API**: `http://localhost:5005`
+- **Swagger UI**: `http://localhost:5005/swagger`
+- **Health Check**: `http://localhost:5005/health`
 
-## Docker
+## 🐳 Docker
 
 ### Executar com Docker
 
-`ash
+```bash
 # Build da imagem
 docker build -t pam_ms_order .
 
@@ -171,137 +171,103 @@ docker run -p 5005:5005 \
   -e ConnectionStrings__DefaultConnection="sua-connection-string" \
   -e JwtSettings__SecretKey="sua-chave-secreta" \
   pam_ms_order
-`
+```
 
 ### Docker Compose (Desenvolvimento)
 
-`ash
-# Subir todos os servicos
+```bash
+# Subir todos os serviços
 docker-compose up -d
 
 # Ver logs
 docker-compose logs -f
 
-# Parar servicos
+# Parar serviços
 docker-compose down
-`
+```
 
-## Documentacao da API
+## 📚 Documentação da API
 
 ### Swagger UI
-A documentacao completa e interativa esta disponivel em:
-- **Local**: http://localhost:5005/swagger
-- **Producao**: https://api.pam.com/pam_ms_order/swagger
+A documentação completa e interativa está disponível em:
+- **Local**: `http://localhost:5005/swagger`
+- **Produção**: `https://api.pam.com/pam_ms_order/swagger`
 
 ### Principais Endpoints
 
-| Metodo | Endpoint | Descricao | Auth |
+| Método | Endpoint | Descrição | Auth |
 |--------|----------|-----------|------|
-| GET | /health | Status de saude do servico | Nao |
-| GET | /api/v1/... | Listar recursos | Sim |
-| POST | /api/v1/... | Criar novo recurso | Sim |
-| PUT | /api/v1/.../{{id}} | Atualizar recurso | Sim |
-| DELETE | /api/v1/.../{{id}} | Remover recurso | Sim |
+| GET | `/health` | Status de saúde do serviço | ❌ |
+| GET | `/api/v1/...` | Listar recursos | ✅ |
+| POST | `/api/v1/...` | Criar novo recurso | ✅ |
+| PUT | `/api/v1/.../{{id}}` | Atualizar recurso | ✅ |
+| DELETE | `/api/v1/.../{{id}}` | Remover recurso | ✅ |
 
-## Autenticacao e Seguranca
+## 🔒 Autenticação e Segurança
 
 ### JWT Bearer Token
-Este microservico utiliza **JWT (JSON Web Token)** para autenticacao:
+Este microserviço utiliza **JWT (JSON Web Token)** para autenticação:
 
-1. **Obter Token**: Faca login no endpoint /api/v1/auth/login
-2. **Usar Token**: Inclua o token no header Authorization: Bearer {token}
-3. **Renovar Token**: Use o endpoint /api/v1/auth/refresh
+1. **Obter Token**: Faça login no endpoint `/api/v1/auth/login`
+2. **Usar Token**: Inclua o token no header `Authorization: Bearer {token}`
+3. **Renovar Token**: Use o endpoint `/api/v1/auth/refresh`
 
-### Configuracao de Seguranca
-
-`json
-{
-  "JwtSettings": {
-    "SecretKey": "sua-chave-super-secreta-com-pelo-menos-32-caracteres",
-    "Issuer": "PAM-API",
-    "Audience": "PAM-Client",
-    "ExpirationInMinutes": 60
-  }
-}
-`
-
-## Testes
+## 🧪 Testes
 
 ### Executar Testes
 
-`ash
+```bash
 # Todos os testes
 dotnet test
 
 # Testes com cobertura
 dotnet test --collect:"XPlat Code Coverage"
 
-# Testes especificos
+# Testes específicos
 dotnet test --filter "Category=Unit"
 dotnet test --filter "Category=Integration"
-`
+```
 
-### Estrutura de Testes
+## 🤝 Contribuição
 
-`
-Tests/
-â”œâ”€â”€ Unit/              # Testes unitarios
-â”œâ”€â”€ Integration/       # Testes de integracao
-â”œâ”€â”€ Fixtures/          # Dados de teste
-â””â”€â”€ Helpers/           # Utilitarios de teste
-`
+Contribuições são sempre bem-vindas! Siga estas etapas:
 
-## Contribuicao
-
-Contribuicoes sao sempre bem-vindas! Siga estas etapas:
-
-### 1. Fork o Projeto
-`ash
+### 1️⃣ Fork o Projeto
+```bash
 git clone https://github.com/EmmanuelSMenezes/PAM_MS_Order.git
-`
+```
 
-### 2. Criar Branch
-`ash
+### 2️⃣ Criar Branch
+```bash
 git checkout -b feature/nova-funcionalidade
-`
+```
 
-### 3. Commit das Mudancas
-`ash
-git commit -m "feat: adiciona nova funcionalidade incrivel"
-`
+### 3️⃣ Commit das Mudanças
+```bash
+git commit -m "feat: adiciona nova funcionalidade incrível"
+```
 
-### 4. Push para Branch
-`ash
+### 4️⃣ Push para Branch
+```bash
 git push origin feature/nova-funcionalidade
-`
+```
 
-### 5. Abrir Pull Request
-Abra um PR descrevendo suas mudancas detalhadamente.
+### 5️⃣ Abrir Pull Request
+Abra um PR descrevendo suas mudanças detalhadamente.
 
-### Padroes de Commit
-Seguimos o padrao [Conventional Commits](https://www.conventionalcommits.org/):
+## 📄 Licença
 
-- eat: Nova funcionalidade
-- ix: Correcao de bug
-- docs: Documentacao
-- style: Formatacao
-- efactor: Refatoracao
-- 	est: Testes
-- chore: Manutencao
+Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## Licenca
+## 🆘 Suporte e Contato
 
-Este projeto esta sob a licenca **MIT**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+### 📞 Canais de Suporte
+- **📧 Email**: suporte@pam.com
+- **💬 WhatsApp**: +55 (11) 99999-9999
+- **🐛 Issues**: [GitHub Issues](https://github.com/EmmanuelSMenezes/PAM_MS_Order/issues)
+- **📖 Wiki**: [Documentação Completa](https://github.com/EmmanuelSMenezes/PAM_MS_Order/wiki)
 
-## Suporte e Contato
-
-### Canais de Suporte
-- **Email**: suporte@pam.com
-- **WhatsApp**: +55 (11) 99999-9999
-- **Issues**: [GitHub Issues](https://github.com/EmmanuelSMenezes/PAM_MS_Order/issues)
-- **Wiki**: [Documentacao Completa](https://github.com/EmmanuelSMenezes/PAM_MS_Order/wiki)
-
-### Equipe de Desenvolvimento
+### 👥 Equipe de Desenvolvimento
 - **Tech Lead**: Emmanuel Menezes
 - **Backend**: Equipe PAM
 - **DevOps**: Equipe PAM
@@ -310,8 +276,10 @@ Este projeto esta sob a licenca **MIT**. Veja o arquivo [LICENSE](LICENSE) para 
 
 <div align="center">
 
-**PAM - Plataforma de Agendamento de Manutencao**  
-*Desenvolvido com amor pela equipe PAM*
+**[⬆ Voltar ao Topo](#-PAM_MS_Order)**
+
+**PAM - Plataforma de Agendamento de Manutenção**  
+*Desenvolvido com ❤️ pela equipe PAM*
 
 [![GitHub](https://img.shields.io/badge/GitHub-PAM-181717?style=for-the-badge&logo=github)](https://github.com/EmmanuelSMenezes)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-PAM-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/company/pam)
